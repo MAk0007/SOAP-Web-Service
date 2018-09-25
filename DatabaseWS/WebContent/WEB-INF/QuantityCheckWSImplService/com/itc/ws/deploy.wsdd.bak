@@ -1,0 +1,37 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from QuantityCheckWSImplService WSDL service -->
+
+  <service name="QuantityCheckWSImpl" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://ws.itc.com"/>
+      <parameter name="wsdlServiceElement" value="QuantityCheckWSImplService"/>
+      <parameter name="schemaQualified" value="http://beans.itc.com,http://ws.itc.com"/>
+      <parameter name="wsdlServicePort" value="QuantityCheckWSImpl"/>
+      <parameter name="className" value="com.itc.ws.QuantityCheckWSImplSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="QuantityCheckWSImpl"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="getQuantity" qname="operNS:getQuantity" xmlns:operNS="http://ws.itc.com" returnQName="retNS:getQuantityReturn" xmlns:retNS="http://ws.itc.com" returnType="rtns:boolean" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:product" xmlns:pns="http://ws.itc.com" type="tns:Product" xmlns:tns="http://beans.itc.com"/>
+      </operation>
+      <parameter name="allowedMethods" value="getQuantity"/>
+
+      <typeMapping
+        xmlns:ns="http://beans.itc.com"
+        qname="ns:Product"
+        type="java:com.itc.beans.Product"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+  </service>
+</deployment>
