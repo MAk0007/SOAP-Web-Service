@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<wsdl:definitions targetNamespace="http://ws.itc.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://ws.itc.com" xmlns:intf="http://ws.itc.com" xmlns:tns1="http://beans.itc.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<wsdl:definitions targetNamespace="http://ws.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://ws.com" xmlns:intf="http://ws.com" xmlns:tns1="http://beans.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 <!--WSDL created by Apache Axis version: 1.4
 Built on Apr 22, 2006 (06:55:48 PDT)-->
  <wsdl:types>
-  <schema elementFormDefault="qualified" targetNamespace="http://ws.itc.com" xmlns="http://www.w3.org/2001/XMLSchema">
-   <import namespace="http://beans.itc.com"/>
+  <schema elementFormDefault="qualified" targetNamespace="http://ws.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://beans.com"/>
    <element name="getQuantity">
     <complexType>
      <sequence>
@@ -20,7 +20,7 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
     </complexType>
    </element>
   </schema>
-  <schema elementFormDefault="qualified" targetNamespace="http://beans.itc.com" xmlns="http://www.w3.org/2001/XMLSchema">
+  <schema elementFormDefault="qualified" targetNamespace="http://beans.com" xmlns="http://www.w3.org/2001/XMLSchema">
    <complexType name="Product">
     <sequence>
      <element name="id" type="xsd:int"/>
@@ -32,17 +32,17 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
   </schema>
  </wsdl:types>
 
-   <wsdl:message name="getQuantityRequest">
+   <wsdl:message name="getQuantityResponse">
 
-      <wsdl:part element="impl:getQuantity" name="parameters">
+      <wsdl:part element="impl:getQuantityResponse" name="parameters">
 
       </wsdl:part>
 
    </wsdl:message>
 
-   <wsdl:message name="getQuantityResponse">
+   <wsdl:message name="getQuantityRequest">
 
-      <wsdl:part element="impl:getQuantityResponse" name="parameters">
+      <wsdl:part element="impl:getQuantity" name="parameters">
 
       </wsdl:part>
 

@@ -7,7 +7,7 @@
         <property name="hibernate.connection.url">jdbc:mysql://10.6.184.246:3306/springdemo</property>
         <property name="hibernate.connection.username">root1</property>
         <property name="hibernate.connection.password">root1</property>
-        <property name="show_sql">true</property>		
-        <mapping class="com.itc.beans.Product" /> 
+        <property name="show_sql">true</property>          
+        <mapping class="com.beans.Product" /> 
     </session-factory>
 </hibernate-configuration>

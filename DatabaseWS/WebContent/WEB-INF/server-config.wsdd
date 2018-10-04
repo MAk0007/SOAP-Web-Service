@@ -3,7 +3,7 @@
   <ns1:parameter name="sendMultiRefs" value="true"/>
   <ns1:parameter name="disablePrettyXML" value="true"/>
   <ns1:parameter name="adminPassword" value="admin"/>
-  <ns1:parameter name="attachments.Directory" value="C:\Users\31231\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp2\wtpwebapps\DatabaseWS\WEB-INF\attachments"/>
+  <ns1:parameter name="attachments.Directory" value="C:\Users\31231\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp3\wtpwebapps\DatabaseWS\WEB-INF\attachments"/>
   <ns1:parameter name="dotNetSoapEncFix" value="true"/>
   <ns1:parameter name="enableNamespacePrefixOptimization" value="false"/>
   <ns1:parameter name="sendXMLDeclaration" value="true"/>
@@ -33,18 +33,18 @@
   <ns1:parameter name="className" value="org.apache.axis.Version"/>
  </ns1:service>
  <ns1:service name="QuantityCheckWSImpl" provider="java:RPC" style="wrapped" use="literal">
-  <ns2:operation name="getQuantity" qname="ns1:getQuantity" returnQName="ns1:getQuantityReturn" returnType="xsd:boolean" soapAction="" xmlns:ns1="http://ws.itc.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns2="http://xml.apache.org/axis/wsdd/">
-   <ns3:parameter qname="ns1:product" type="ns2:Product" xmlns:ns2="http://beans.itc.com" xmlns:ns3="http://xml.apache.org/axis/wsdd/"/>
+  <ns2:operation name="getQuantity" qname="ns1:getQuantity" returnQName="ns1:getQuantityReturn" returnType="xsd:boolean" soapAction="" xmlns:ns1="http://ws.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns2="http://xml.apache.org/axis/wsdd/">
+   <ns3:parameter qname="ns1:product" type="ns2:Product" xmlns:ns2="http://beans.com" xmlns:ns3="http://xml.apache.org/axis/wsdd/"/>
   </ns2:operation>
   <ns1:parameter name="allowedMethods" value="getQuantity"/>
   <ns1:parameter name="typeMappingVersion" value="1.2"/>
   <ns1:parameter name="wsdlPortType" value="QuantityCheckWSImpl"/>
-  <ns1:parameter name="className" value="com.itc.ws.QuantityCheckWSImpl"/>
+  <ns1:parameter name="className" value="com.ws.QuantityCheckWSImpl"/>
   <ns1:parameter name="wsdlServicePort" value="QuantityCheckWSImpl"/>
-  <ns1:parameter name="schemaQualified" value="http://beans.itc.com,http://ws.itc.com"/>
-  <ns1:parameter name="wsdlTargetNamespace" value="http://ws.itc.com"/>
+  <ns1:parameter name="schemaQualified" value="http://ws.com,http://beans.com"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://ws.com"/>
   <ns1:parameter name="wsdlServiceElement" value="QuantityCheckWSImplService"/>
-  <ns1:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns3:Product" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:com.itc.beans.Product" xmlns:ns3="http://beans.itc.com"/>
+  <ns1:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns3:Product" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:com.beans.Product" xmlns:ns3="http://beans.com"/>
  </ns1:service>
  <ns1:transport name="http">
   <ns1:requestFlow>
